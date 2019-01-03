@@ -1,7 +1,8 @@
 const siteCacheName = "cranium";
 const cacheName = "cranium-static";
 var siteImgsCache = 'cranium-imgs';
-const filesToCache = ["/", "./index.html", 
+const filesToCache = [
+    "./", 
 "./css/font-awesome.min.css",
  "./css/materialize.css",
  "./css/style.css",
@@ -43,8 +44,13 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
     const baseURL = new URL(event.request.url);
 
-    if (requestUrl.origin === location.origin) {
-    if (requestUrl.pathname.startsWith('/photos/')) {
+    if (baseURL.origin === location.origin) {
+        if (baseURL.pathname === cacheName) {
+          event.respondWith(caches.match(cacheName));
+          return;
+        } 
+      }
+    if (baseURL.pathname.startsWith('./images/')) {
         event.respondWith(servePhoto(event.request));
         return;
     }
@@ -60,7 +66,6 @@ self.addEventListener("fetch", event => {
         );
         return;
     }
-    }
     event.respondWith(
         caches.match(event.request).then(response => {
             return response || fetch(event.request);
@@ -69,7 +74,7 @@ self.addEventListener("fetch", event => {
 });
 
 function servePhoto(request) {
-    var storageUrl = request.url.replace(/-\d+px\.jpg$/, '');
+    var storageUrl = request.url.replace(/-\d+px\.png$/, '');
   
     return caches.open(siteImgsCache).then(function(cache) {
       return cache.match(storageUrl).then(function(response) {
@@ -88,3 +93,12 @@ self.addEventListener("message", event => {
         self.skipWaiting();
     }
 });
+
+// Ensure refresh is only called once.
+    // This works around a bug in "force update on reload".
+    let refreshing;
+    self.addEventListener('controllerchange', () => {
+      if (refreshing) return;
+      window.location.reload();
+      refreshing = true;
+    });
