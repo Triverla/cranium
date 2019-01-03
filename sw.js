@@ -14,8 +14,7 @@ const filesToCache = [
  "./js/bootstrap.js",
  "./js/materialize.min.js",
  "./js/jquery.mixitup.min.js",
- "./js/custom.js",
- "./images"
+ "./js/custom.js"
 ];
 
 self.addEventListener("install", event => {
