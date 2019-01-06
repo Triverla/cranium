@@ -8,9 +8,9 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "/cranium",
+  "start_url": "/",
   "background_color": "#3367D6",
   "display": "standalone",
-  "scope": "/cranium",
+  "scope": "/",
   "theme_color": "#3367D6"
 }
