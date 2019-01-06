@@ -215,6 +215,15 @@ th {
     float: left;
     width: 20%;
 }
+.logo a {
+    float: left;
+    height: 30px;
+    padding: 5px 5px;
+    font-size: 40px;
+    line-height: 20px;
+    color: #fff;
+    font-family: OCR A Std, monospace
+} 
 .logo img {} .menu-bar {
     float: left;
     width: 80%;
@@ -1145,7 +1154,16 @@ td {} .inn-com p {} .inn-com-form {} .inn-com-form form {
     float: left;
     width: 75%;
 }
-.mm-logo a {} .mm-logo a img {
+.mm-logo a {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 35px;
+    line-height: 20px;
+    color: #fff;
+    font-family: OCR A Std, monospace
+} 
+.mm-logo a img {
     padding: 5px;
 }
 .mm-icon {

@@ -71,7 +71,7 @@
 		<div class="mm">
 			<div class="mm-inn">
 				<div class="mm-logo">
-					<a href="index.html"><img src="images/logo.png" alt=""><b>Cra</b>ium
+					<a href="index.html"><img src="images/logo.png" alt=""><b>Cra</b>nium<sup>&reg;</sup>
 					</a>
 				</div>
 				<div class="mm-icon"><span><i class="fa fa-bars show-menu" aria-hidden="true"></i></span>
@@ -186,7 +186,7 @@
 				</div>
 				<div class="row">
 					<div class="logo">
-						<a href="main.html"><img src="images/logo.png" alt="" /><b>Cra</b>nium
+						<a href="main.html"><img src="images/logo.png" alt="" /><b>Cra</b>nium<sup>&reg;</sup>
 						</a>
 					</div>
 					<div class="menu-bar">
@@ -218,21 +218,21 @@
 						<div class="caption center-align slid-cap">
 							<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
 							<h2>The Right Way!</h2>
-							<p>At Cranium, we aim on taking technology to the Next Level by providing IT solutions that matches international standards.</p> <a href="#" class="waves-effect waves-light">About Us</a><a href="#">Sign Up</a> </div>
+							<p>At Cranium, we aim on taking technology to the Next Level by providing IT solutions that matches international standards.</p> <a href="#" class="waves-effect waves-light">About Us</a><a href="#" data-toggle="modal" data-target="#modal2">Sign Up</a> </div>
 					</li>
 					<li> <img src="images/code/2.png" alt="">
 						<!-- random image -->
 						<div class="caption center-align slid-cap">
 							<h5 class="light grey-text text-lighten-3">Here's what we do.</h5>
 							<h2>Providing IT Solutions</h2>
-							<p>Want to build a website for your business or brand? Want to code your final year project? Don't know how to deal with an IT problem? we have a solution.</p> <a href="#" class="waves-effect waves-light">Learn More</a><a href="#">Contact Us</a> </div>
+							<p>Want to build a website for your business or brand? Want to code your final year project? Don't know how to deal with an IT problem? we have a solution.</p> <a href="#" class="waves-effect waves-light">Learn More</a><a href="#" data-toggle="modal" data-target="#modal4">Contact Us</a> </div>
 					</li>
 					<li> <img src="images/code/1.png" alt="">
 						<!-- random image -->
 						<div class="caption center-align slid-cap">
 							<h5 class="light grey-text text-lighten-3">We also do this</h5>
 							<h2>Consultancy</h2>
-							<p>Consult us for tips and advice concerning your business, school, company, etc.</p> <a href="#" class="waves-effect waves-light">Contact Us</a><a href="#">Learn More</a> </div>
+							<p>Consult us for tips and advice concerning your business, school, company, etc.</p> <a href="#" class="waves-effect waves-light" data-toggle="modal" data-target="#modal4">Contact Us</a><a href="#">Learn More</a> </div>
 					</li>
 					<li> <img src="images/code/a6.png" alt="">
 						<!-- random image -->
@@ -547,7 +547,7 @@
 							<div class="foot-com foot-2">
 								<h5>Phone: (+234) 8147 32 35 91</h5> </div>
 							<div class="foot-com foot-3">
-								<!--<a class="waves-effect waves-light" href="#">online room booking</a>--><a class="waves-effect waves-light" href="#">Contact Us</a> </div>
+								<!--<a class="waves-effect waves-light" href="#">online room booking</a>--><a class="waves-effect waves-light" href="#" data-toggle="modal" data-target="#modal4">Contact Us</a> </div>
 							<div class="foot-com foot-4">
 								<a href="#"><img src="images/card.png" alt="" />
 								</a>
@@ -633,9 +633,9 @@
 										<form>
 											<ul class="foot-subsc">
 												<li>
-													<input type="text" placeholder="Enter your email id"> </li>
+													<input type="email"  id="semail" placeholder="Enter your email id"> </li>
 												<li>
-													<input type="submit" value="submit"> </li>
+													<input type="submit" id="ssubmit" value="submit" > </li>
 											</ul>
 										</form>
 									</div>
@@ -718,6 +718,56 @@
 						<div>
 							<div class="input-field s12"> <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal3">Forgot password</a> | <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal2">Create a new account</a> </div>
 						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- CONTACT SECTION -->
+		<div id="modal4" class="modal fade" role="dialog">
+			<div class="log-in-pop">
+				<div class="log-in-pop-left">
+					<h1>Hello... <span>{{ name4 }}</span></h1>
+					<p>Want to find out more about us?? Write to us. It takes few minutes</p>
+					<h4>Login with social media</h4>
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+						</li>
+						<li><a href="#"><i class="fa fa-google"></i> Google+</a>
+						</li>
+						<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+						</li>
+					</ul>
+				</div>
+				<div class="log-in-pop-right">
+					<a href="#" class="pop-close" data-dismiss="modal"><img src="images/cancel.png" alt="" />
+					</a>
+					<h4>Contact Us</h4>
+					<p>Want to find out more about us?? Write to us. It takes few minutes</p>
+					<form class="s12">
+						<div>
+							<div class="input-field s12">
+								<input type="text" data-ng-model="name4" class="validate" id="cname">
+								<label>User name</label>
+							</div>
+						</div>
+						<div>
+							<div class="input-field s12">
+								<input type="email" class="validate" id="cemail">
+								<label>Email id</label>
+							</div>
+						</div>
+						<div>
+							<div class="input-field s12">
+								<textarea class="validate" cols="15" rows="4" id="cmessage"></textarea>
+								<label>Message</label>
+							</div>
+						</div>
+						<div>
+							<div class="input-field s4">
+								<button id="csubmit" class="waves-effect waves-light log-in-btn" data-dismiss="modal" >Submit</button> 
+							</div>
+						</div>
+						
 					</form>
 				</div>
 			</div>
@@ -827,6 +877,7 @@
 	<script src="js/materialize.min.js" type="text/javascript"></script>
 	<script src="js/jquery.mixitup.min.js" type="text/javascript"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/idb.js"></script>
 	
 </body>
 </html>
